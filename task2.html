@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image</title>
+</head>
+<body>
+
+    <img src="./asset/images/minister1.jfif" id="img-1" alt="min1" height="300px" width="300px"> <br>
+    <strong id="imgName">minister1</strong><br>
+    <button type="button" оnclick="changeImage()"> change Image </button>
+    
+
+<br><br><br>
+    <img src="./asset/images/ajith.jfif" id="img-2" alt="min2"  height="300px" width="300px"><br>
+    <strong id="img-name">ajith</strong><br>
+
+    <button type="button"  оnclick="chImg(`ajith`)">AJITH</button>
+    <button type="button"  оnclick="chImg(`vijay`)">Vijay</button>
+    <button type="button"  оnclick="chImg(`rajni`)">Rajni</button>
+    <button type="button"  оnclick="chImg(`kamal`)">Kamal</button>
+    <button type="button"  оnclick="chImg(`surya`)">Surya</button>
+
+
+    <script>
+
+        function chImg(name) {
+            console.log(name);
+
+            if(name == "ajith"){
+                document.getElementById("img-2").src = "./asset/images/ajith.jfif";
+                document.getElementById("img-name").innerHTML = "AJITH";
+            }else if(name == "vijay"){
+                document.getElementById("img-2").src = "./asset/images/vijay.jfif";
+                document.getElementById("img-name").innerHTML = "vijay";
+            }else if(name == "rajni"){
+                document.getElementById("img-2").src = "./asset/images/rajni.jfif";
+                document.getElementById("img-name").innerHTML = "rajni";
+            }else if(name == "kamal"){
+                document.getElementById("img-2").src = "./asset/images/kamal.jfif";
+                document.getElementById("img-name").innerHTML = "kamal";
+            }else if(name == "surya"){
+                document.getElementById("img-2").src = "./asset/images/surya.jfif";
+                document.getElementById("img-name").innerHTML = "surya";
+            }
+
+        }
+
+
+
+
+        function changeImage(){
+
+            let name = document.getElementById("imgName").innerHTML;
+
+            if(name == "ASH"){
+
+                document.getElementById("img-1").src = "./asset/images/minister1.jfif";
+                document.getElementById("imgName").innerHTML = "Charizard";
+
+            }else{
+
+                document.getElementById("img-1").src = "./asset/images/minister2.jfif";
+                document.getElementById("imgName").innerHTML = "ASH";
+            }
+        }
+
+    </script>
+</body>
+</html>

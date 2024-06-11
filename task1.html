@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; 
+        }
+
+        #clock-container {
+            width: 200px; 
+            height: 200px; 
+            border-radius: 50%; 
+            background-color: #3498db; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: black; 
+            font-size: 24px; 
+        }
+    </style>
+</head>
+<body>
+    <div id="clock-container">
+        <div id="d1"></div>
+    </div>
+    <script>
+        function myclock(){
+            let mytime=new Date();
+            document.getElementById("d1").innerHTML = mytime.toLocaleTimeString();
+        }
+        myclock(); // Call myclock once to display time immediately
+        setInterval(myclock,1000); // Call myclock every second
+    </script>
+</body>
+</html>
